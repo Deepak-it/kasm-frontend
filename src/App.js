@@ -8,7 +8,7 @@ function App() {
 
   async function handleSubmit(course) {
     try {
-      const response = await axios.post("http://localhost:5500/get_user", {
+      const response = await axios.post("https://g0hov6v3e7.execute-api.us-east-2.amazonaws.com/get_user", {
         target_user: {
           username: "random2@kasm.local",
         },
@@ -17,7 +17,6 @@ function App() {
         api_key_secret: "oWKnc4zl0NXzeYCnTaJjPUZBgTYmE5Yj",
         group_id: course.group_id,
       });
-      debugger;
       if (response?.data?.url?.kasm_url) {
         const url = `https://iris.kasmtestingdevops.in${response.data.url.kasm_url}`;
         window.open(url, "_blank");
