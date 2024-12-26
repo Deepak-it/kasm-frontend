@@ -8,17 +8,17 @@ function App() {
 
   async function handleSubmit(course) {
     try {
-      const response = await axios.post("https://g0hov6v3e7.execute-api.us-east-2.amazonaws.com/get_user", {
+      const response = await axios.post("https://wiqpjryl53.execute-api.us-east-2.amazonaws.com/get_user", {
         target_user: {
-          username: "random2@kasm.local",
+          username: "randomeyiiii@kasm.local",
         },
-        api_key: "QgHXLoTMeCpk",
+        api_key: "35MGyc1m1Re3",
         descriptionCourse: course.descriptionCourse,
-        api_key_secret: "oWKnc4zl0NXzeYCnTaJjPUZBgTYmE5Yj",
+        api_key_secret: "bb4UfPwnLAQB7PPOWK9TuvpmbYqw18K8",
         group_id: course.group_id,
       });
       if (response?.data?.url?.kasm_url) {
-        const url = `https://iris.kasmtestingdevops.in${response.data.url.kasm_url}`;
+        const url = `https://uat.labs.learning.intersystems.com${response.data.url.kasm_url}`;
         window.open(url, "_blank");
       } else {
         console.warn("No data received from the server.");
@@ -32,7 +32,7 @@ function App() {
     {
       name: ".NET QuickStart",
       descriptionCourse: "tot-1065a .NET QuickStart",
-      group_id: "a67965f94b5d4ec0899bac1339e75170",
+      group_id: "755b976eaf8c42d7a5e079ff3366efe5",
     },
     // {
     //   name: "Java Essentials",
